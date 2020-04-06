@@ -1,0 +1,31 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*clearfix*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*variables*/
+:root {
+    --banner-font: 150px;
+    --large-font: 100px;
+    --very-big-font: 80px;
+    --big-font: 60px;
+    --medium-font: 40px;
+    --description-font: 30px;
+    --small-font: 25px;
+    --very-small-font: 20px;
+}
+
+/*body*/
+
+body {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}

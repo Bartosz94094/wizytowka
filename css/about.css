@@ -1,0 +1,209 @@
+/*about-TODO*/
+.about {
+    cursor: default;
+}
+
+.about>.about-banner-slash-text {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    color: grey;
+}
+
+.about>.about-banner-slash-text.blinking {
+    animation: banner-anim 0.3s ease-in-out forwards;
+}
+
+.about>.about-banner-slash-text>.top,
+.about>.about-banner-slash-text>.bottom {
+    text-align: center;
+    font: var(--banner-font)/100px cursive;
+    font-family: 'Monoton', cursive;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about>.about-banner-slash-text>.top::before,
+.about>.about-banner-slash-text>.bottom::before {
+    content: attr(title);
+    transform: rotate(5deg);
+}
+
+.about>.about-banner-slash-text>.top {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    right: 0;
+    bottom: 50%;
+}
+
+.about>.about-banner-slash-text>.top::before {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+}
+
+.about>.about-banner-slash-text>.bottom {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 5px;
+    bottom: 0;
+}
+
+.about>.about-banner-slash-text>.bottom::before {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+}
+
+.about>.introduction {
+    height: 20vh;
+}
+
+.about>.introduction>div {
+    position: relative;
+    height: 10vh;
+}
+
+.about>.introduction>div>h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-size: var(--medium-font);
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about>.profile {
+    width: 100%;
+}
+
+.about>.profile>.description {
+    float: left;
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-indent: 15%;
+    text-align: justify;
+    font-size: var(--description-font);
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    color: white;
+    opacity: 0;
+}
+
+.about>.profile>.description.visible {
+    animation: show-anim 0.3s linear forwards;
+}
+
+.about>.profile>img {
+    float: right;
+    width: 25%;
+    margin-right: 5%;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.about>.profile>img.visible {
+    animation: show-anim 0.3s linear forwards;
+}
+
+.about>.my-photos {
+    padding: 20vh 5vw 10vh 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.about>.my-photos>.photo {
+    position: relative;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
+    margin-bottom: 5vh;
+    cursor: pointer;
+}
+
+.about>.my-photos>.photo>.photo-box {
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 30vw;
+    height: 19.995vw;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.about>.my-photos>.photo>.photo-box>.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.about>.my-photos>.photo>.photo-box>.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    padding: 40px 20px 15px;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.about>.my-photos>.photo::before,
+.about>.my-photos>.photo::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.about>.my-photos>.photo:hover::before {
+    transform: rotate(8deg);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+.about>.my-photos>.photo:hover::after {
+    transform: rotate(-8deg);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+.about>.my-photos>.photo:hover>.photo-box>.image {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 80px;
+    background-position: bottom center;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.about>.my-photos>.photo:hover>.photo-box>.title {
+    color: black;
+    text-shadow: none;
+}

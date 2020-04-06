@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartosz Czechowicz - web developer</title>
+    <script src="https://kit.fontawesome.com/fd865ac167.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("html").on("submit", "#contact_form", function (e) {
+                e.preventDefault();
+                $("#send_form_status").html('').hide();
+                var data = $("#contact_form").serialize();
+                $.post("/send_form.php", data, function (res) {
+                    $("#send_form_status").html(res.msg).show();
+                    if (res.status == 1) {
+                        $("#contact_form")[0].reset();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="introduction-btn" href="#introduction"><i class="fas fa-rocket"></i>Introduction</a></li>
+            <li><a class="skills-btn" href="#skills"><i class="fas fa-rocket"></i>Skills</a></li>
+            <li><a class="aboutme-btn" href="#about"><i class="fas fa-rocket"></i>About me</a></li>
+            <li><a class="projects-btn" href="#projects"><i class="fas fa-rocket"></i>Projects</a></li>
+            <li><a class="contact-btn" href="#contact"><i class="fas fa-rocket"></i>Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="introduction" id="introduction">
+            <div class="night">
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+            </div>
+            <div class="introduction-text">
+                <h1>Bartosz Czechowicz</h1>
+                <h2>Front-end developer</h2>
+            </div>
+            <div class="blinking-arrow">
+                <i class="fas fa-star"></i>
+                <p class="text">Go down...</p>
+            </div>
+            <div class="blinking-texts">
+                <p class="html">HTML</p>
+                <p class="css">CSS + SASS/SCSS</p>
+                <p class="javascript">JavaScript</p>
+                <p class="react">React.js</p>
+                <p class="vue">Vue.js</p>
+                <p class="mongodb">MongoDB</p>
+            </div>
+        </section>
+        <section class="skills clearfix" id="skills">
+            <aside class="welcome">
+                <div class="first-sentence">Hi!</div>
+                <div class="second-sentence">Do you know that the Milky Way has over 200 billion stars?</div>
+                <div class="third-sentence">Ok, nevermind...</div>
+                <div class="forth-sentence">Let's talk about coding!</div>
+            </aside>
+            <div class="skills-banner">
+                <div class="letter">{</div>
+                <div class="letter">s</div>
+                <div class="letter">k</div>
+                <div class="letter">i</div>
+                <div class="letter">l</div>
+                <div class="letter">l</div>
+                <div class="letter">s</div>
+                <div class="letter">}</div>
+            </div>
+            <div class="skills-list">
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>HTML5</h1><i class="fab fa-html5"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>HTML5 is a markup language used for structuring and presenting content on the World Wide
+                            Web
+                        </p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>CSS3 + SASS/SCSS</h1><i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the
+                            presentation
+                            of a document written in a markup language like HTML. CSS is a cornerstone technology of
+                            the
+                            World Wide Web, alongside HTML and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>JavaScript (ES5 & ES6)</h1><i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>JavaScript, often abbreviated as JS, is a high-level, often just-in-time compiled, and
+                            multi-paradigm programming language. It has curly-bracket syntax, dynamic typing,
+                            prototype-based
+                            object-orientation, and first-class functions.<br /> <br /> Alongside HTML and CSS,
+                            JavaScript is one of the core technologies of the World Wide Web.
+                            JavaScript enables interactive web pages and is an essential part of web applications.
+                        </p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>React.js + React Router</h1><i class="fab fa-react"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>React.js is a JavaScript library for building user
+                            interfaces. It is maintained by Facebook and a community of individual developers and
+                            companies.<br /> <br /> React can be used as a base in the development of single-page or
+                            mobile applications.
+                            However, React is only concerned with rendering data to the DOM, and so creating React
+                            applications usually requires the use of additional libraries for state management and
+                            routing. Redux and React Router are respective examples of such libraries.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>Vue.js</h1><i class="fab fa-vuejs"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>Vue.js is an open-source Model–view–viewmodel JavaScript framework for building user
+                            interfaces and single-page applications. Vue.js features an incrementally adoptable
+                            architecture that focuses on declarative rendering and component composition.<br />
+                            <br />Vue.js lets you extend HTML with
+                            HTML attributes called directives. The directives offer
+                            functionality to HTML applications, and come as either built-in or user defined
+                            directives.
+                        </p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>MongoDB</h1><i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL
+                            database program, MongoDB uses JSON-like documents with schema.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>Git & GitHub</h1><i class="fab fa-github"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>Git is a distributed version-control system for tracking changes in source code during
+                            software development. It is designed for coordinating work among programmers, but it can
+                            be
+                            used to track changes in any set of files. Its goals include speed, data integrity and
+                            support for distributed, non-linear workflows.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>AJAX</h1><i class="far fa-file-code"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>AJAX allows web pages to be updated asynchronously by exchanging data with a web server
+                            behind the scenes. This means that it is possible to update parts of a web page, without
+                            reloading the whole page. AJAX uses a combination of a browser built-in XMLHttpRequest
+                            object, JavaScript and HTML DOM</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>Responvie Web Design</h1><i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>Responsive Web Design (RWD) is about using HTML and CSS to automatically resize, hide,
+                            shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and
+                            phones)</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>Java + Hibernate (academic experience)</h1><i class="fab fa-java"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>Responsive Web Design (RWD) is about using HTML and CSS to automatically resize, hide,
+                            shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and
+                            phones</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-front">
+                        <h1>SQL (academic experience)</h1><i class="fas fa-server"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>SQL (Structured Query Language) is a domain-specific language used in programming and
+                            designed for managing data held in a relational database management system (RDBMS), or for
+                            stream processing in a relational data stream management system (RDSMS). It is particularly
+                            useful in handling structured data, i.e. data incorporating relations among entities and
+                            variables.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <p>click</p>
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-banner-slash-text">
+                <div title="about me" class="top"></div>
+                <div title="about me" class="bottom"></div>
+            </div>
+            <div class="introduction">
+                <div class="first-txt">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                </div>
+                <div class="second-txt">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                </div>
+            </div>
+            </div>
+            <div class="profile clearfix">
+                <p class="description">Quaerat rem laborum laboriosam error molestias doloribus
+                    atque. Nobis, laborum iure nostrum exercitationem sequi deleniti reprehenderit ut labore
+                    excepturi
+                    sint, voluptatem rerum? Iure fuga deserunt minima, dolores veniam libero. Eaque eum, doloribus
+                    vitae
+                    ipsam recusandae cum corporis quos at reiciendis dolore illum fugit adipisci similique velit
+                    omnis
+                    minus, maxime saepe voluptatibus numquam earum illo repellendus ipsum asperiores. Impedit quidem
+                    eius accusantium in provident ipsum. Ex fugit voluptate aliquam modi debitis quam, blanditiis
+                    voluptates minima voluptatem similique ab aliquid atque nulla ducimus totam recusandae iure
+                    ullam
+                    molestias optio!</p>
+                <img src="images/bartosz_czechowicz.jpg" alt="bartosz_czechowicz" class="photo">
+            </div>
+            <div class="my-photos">
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel1.jpg')">
+                        </div>
+                        <div class="title">
+                            Annapurna Circuit
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel2.jpg')">
+                        </div>
+                        <div class="title">
+                            Nepal, Kathmandu
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel3.jpg')">
+                        </div>
+                        <div class="title">
+                            Malaysia, Kuala Lumpur
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel4.jpg')">
+                        </div>
+                        <div class="title">
+                            Japan, Kyoto, Gion District
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel5.jpg')">
+                        </div>
+                        <div class="title">
+                            Israel, Haifa
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel6.jpg')">
+                        </div>
+                        <div class="title">
+                            Morocco, Chefchaouen
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel7.jpg')">
+                        </div>
+                        <div class="title">
+                            Some competitions ;)
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="photo-box">
+                        <div class="image" style="background-image: url('images/travel8.jpg')">
+                        </div>
+                        <div class="title">
+                            Thailand, Chiang Mai
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects clearfix" id="projects">
+            <div class="projects-banner">
+                <h1>[projects]</h1>
+            </div>
+            <div class="projects-info">
+                <p class="message">coming soon</p>
+                <p class="upcoming">Now I'm working on online store in Single Page Application model (using React.js
+                    and
+                    React Router). It's a part of my dissertation.</p>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h1 class="contact-banner">
+                <span class="letter">c</span>onta<span class="letter">c</span>t
+            </h1>
+            <div class="contact-form-and-info clearfix">
+                </h1>
+                <div class="contact-form">
+                    <h2>Contact form</h2>
+                    <h3>Don't hesitate to send me a message!</h3>
+                    <div id="send_form_status"></div>
+                    <form method="post" action="/send_form.php" id="contact_form">
+                        <div><label for="name">Name and surname</label></div>
+                        <div><input type="text" name="name" id="name" class="formField" /></div>
+                        <div><label for="phone">Phone number</label></div>
+                        <div><input type="text" name="phone" id="phone" class="formField" /></div>
+                        <div><label for="email">E-mail adress</label></div>
+                        <div><input type="text" name="email" id="email" class="formField" /></div>
+                        <div><label for="message">Message</label></div>
+                        <div><textarea name="message" id="message" class="formField"></textarea></div>
+                        <div><button id="sendBtn">send</button></div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h1>Bartosz Czechowicz</h1>
+                    <div class="mail"><i class="fas fa-envelope"></i>bartosz7czechowicz@gmail.com</div>
+                    <div class="phone-number"><i class="fas fa-phone-square-alt"></i>+48 574 577 053</div>
+                    <div class="facebook"><i class="fab fa-facebook"></i><a
+                            href="https://www.facebook.com/bartosz.czechowicz.35">Facebook</a></div>
+                    <div class="github"><i class="fab fa-github"></i><a
+                            href="https://github.com/Bartosz94094">GitHub</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

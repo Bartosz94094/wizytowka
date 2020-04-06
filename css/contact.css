@@ -1,0 +1,123 @@
+/*contact-TODO*/
+
+main>.contact>.contact-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 10vh 0 10vh 0;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    font-weight: 100;
+    font-size: var(--banner-font);
+    letter-spacing: 5vh;
+    text-transform: uppercase;
+    color: grey;
+    text-shadow: 5px 5px black;
+    cursor: default;
+}
+
+main>.contact>.contact-banner.blinking {
+    animation: banner-anim 0.3s ease-in-out forwards;
+}
+
+main>.contact>.contact-banner>.letter {
+    display: block;
+    transform: rotate(90deg);
+}
+
+main>.contact>.contact-form-and-info {
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-size: var(--small-font);
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+main>.contact>.contact-form-and-info>.contact-form {
+    float: left;
+}
+
+main>.contact>.contact-form-and-info>.contact-form>h2 {
+    padding: 2vh 0;
+    font-family: 'lato', sans-serif;
+    font-weight: 700;
+    font-size: var(--medium-font);
+    cursor: default;
+}
+
+main>.contact>.contact-form-and-info>.contact-form>h3 {
+    padding: 1.5vh 0;
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+    font-size: var(--small-font);
+    cursor: default;
+}
+
+main>.contact>.contact-form-and-info>.contact-form>form>div>input {
+    display: block;
+    width: 100%;
+    margin-bottom: 2vh;
+    font-size: var(--very-small-font);
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    padding: 1vh;
+}
+
+main>.contact>.contact-form-and-info>.contact-form>form>div>textarea {
+    display: block;
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 2vh;
+    font-size: var(--very-small-font);
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    padding: 1vh;
+}
+
+main>.contact>.contact-form-and-info>.contact-form>form>div>button {
+    display: block;
+    width: 10vw;
+    margin: 0 auto 5vh auto;
+    height: 3vh;
+    line-height: 3vh;
+    font-family: 'lato', sans-serif;
+    font-weight: 700;
+    font-size: 2vh;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+main>.contact>.contact-form-and-info>.contact-form>form>div>button:hover {
+    color: white;
+    border-color: white;
+    background-color: rgb(28, 28, 28);
+}
+
+main>.contact>.contact-form-and-info>.contact-info {
+    float: right;
+}
+
+main>.contact>.contact-form-and-info>.contact-info>h1 {
+    padding: 2vh 0;
+    font-size: var(--small-font);
+}
+
+main>.contact>.contact-form-and-info>.contact-info>.phone-number,
+main>.contact>.contact-form-and-info>.contact-info>.facebook,
+main>.contact>.contact-form-and-info>.contact-info>.github,
+main>.contact>.contact-form-and-info>.contact-info>.mail {
+    padding: 1vh 0;
+}
+
+main>.contact>.contact-form-and-info>.contact-info>div>i {
+    padding-right: 3vw;
+}
+
+main>.contact>.contact-form-and-info>.contact-info a {
+    color: white;
+    text-decoration: none;
+}

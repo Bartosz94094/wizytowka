@@ -1,0 +1,56 @@
+/*navigation - TODO*/
+
+nav {
+    position: fixed;
+    top: -20vh;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(28, 28, 28, 0), black);
+    transition: 0.5s;
+}
+
+nav>ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav>ul>li {
+    display: block;
+    width: 10%;
+}
+
+nav>ul>li>a {
+    display: block;
+    width: 100%;
+    padding: 0.5vh 0;
+    text-align: center;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-size: var(--small-font);
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav>ul>li>a>i {
+    padding-right: 12px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+nav>ul>li>a:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+nav>ul>li>a.highlighted>i {
+    opacity: 100%;
+}
+
+nav.visible {
+    top: 0;
+}

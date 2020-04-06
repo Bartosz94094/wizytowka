@@ -1,0 +1,192 @@
+/*skills-TODO*/
+main>.skills {
+    position: relative;
+    cursor: default;
+}
+
+main>.skills>.skills-banner {
+    float: left;
+    padding-top: 20vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    color: grey;
+}
+
+main>.skills>.skills-banner>.letter {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--banner-font);
+    font-family: 'Monoton', cursive;
+    font-weight: 100;
+    transform: skewY(15deg);
+}
+
+main>.skills>.skills-banner.blinking {
+    animation: banner-anim 0.3s ease-in-out forwards;
+}
+
+.skills>.welcome {
+    position: relative;
+    height: 50vh;
+    background-image: url("../images/milkyway.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.skills>.welcome>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--large-font);
+    text-align: center;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    color: white;
+    opacity: 0%;
+    text-shadow: 30px 30px black;
+}
+
+.skills>.welcome>.first-sentence.visible {
+    animation: hello-anim1 10s linear infinite;
+}
+
+.skills>.welcome>.second-sentence.visible {
+    animation: hello-anim2 10s linear infinite;
+}
+
+.skills>.welcome>.third-sentence.visible {
+    animation: hello-anim3 10s linear infinite;
+}
+
+.skills>.welcome>.forth-sentence.visible {
+    animation: hello-anim4 10s linear infinite;
+}
+
+main>.skills>.skills-list {
+    float: right;
+    width: 75%;
+    height: 250vh;
+    padding-top: 30vh;
+    padding-right: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    opacity: 0%;
+}
+
+main>.skills>.skills-list.visible {
+    animation: show-anim 1s linear forwards;
+}
+
+main>.skills>.skills-list>.skill {
+    position: relative;
+    width: 26%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 5px solid transparent;
+    border-radius: 1em;
+    background-clip: padding-box;
+    transition: 0.1s;
+}
+
+main>.skills>.skills-list>.skill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: linear-gradient(to right, white, #38495a);
+}
+
+main>.skills>.skills-list>.skill>.skill-front,
+main>.skills>.skills-list>.skill>.skill-back {
+    backface-visibility: hidden;
+    transition: 0.4s;
+}
+
+main>.skills>.skills-list>.skill>.skill-front {
+    transform: perspective(900px) rotateY(0deg);
+}
+
+main>.skills>.skills-list>.skill>.skill-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: perspective(900px) rotateY(180deg);
+}
+
+main>.skills>.skills-list>.skill.flip>.skill-front {
+    transform: perspective(900px) rotateY(-180deg);
+}
+
+main>.skills>.skills-list>.skill.flip>.skill-back {
+    transform: perspective(900px) rotateY(0deg);
+}
+
+main>.skills>.skills-list>.skill>.skill-front>h1 {
+    padding: 2vh 5px;
+    font-size: var(--medium-font);
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    line-height: 5vh;
+}
+
+main>.skills>.skills-list>.skill>.skill-front>i {
+    font-size: 30vh;
+    line-height: 30vh;
+    padding-bottom: 2vh;
+}
+
+main>.skills>.skills-list>.skill.flip>.skill-back>p {
+    padding: 1vh;
+    text-align: justify;
+    font-size: var(--very-small-font);
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+}
+
+main>.skills>.skills-list>.skill:nth-child(odd):hover {
+    color: rgb(195, 96, 44);
+    cursor: pointer;
+}
+
+main>.skills>.skills-list>.skill:nth-child(even):hover {
+    color: rgb(156, 220, 254);
+    cursor: pointer;
+}
+
+main>.skills>.message {
+    position: absolute;
+    top: 65vh;
+    right: 11vw;
+    transform: rotate(15deg);
+    text-align: center;
+    font-size: var(--big-font);
+    animation: message-anim 8s infinite normal;
+    opacity: 0%;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main>.skills>.message>i {
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main>.skills>.message.visible {
+    animation: message-anim 8s infinite normal, show-anim 2s linear forwards;
+}
