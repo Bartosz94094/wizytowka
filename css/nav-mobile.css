@@ -1,0 +1,11 @@
+.burger-menu,
+.close-burger-menu {
+    display: none;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    transform: translate(-50%, -50%);
+    color: gray;
+    font-size: var(--very-big-font);
+    z-index: 999;
+}

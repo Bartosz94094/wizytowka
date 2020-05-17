@@ -1,0 +1,539 @@
+@media (max-width: 360px) and (orientation: portrait) {
+
+    /*handy*/
+    /*variables*/
+    :root {
+        --banner-font: 58px;
+        --large-font: 36px;
+        --very-big-font: 30px;
+        --big-font: 25px;
+        --medium-font: 20px;
+        --description-font: 16px;
+        --small-font: 14px;
+        --very-small-font: 12px;
+        --stars-font: 8px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 120px;
+    }
+
+    /*nav*/
+    nav {
+        display: none;
+        position: fixed;
+        top: -20vh;
+        left: 0;
+        z-index: 998;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to top, rgba(28, 28, 28, 0), black);
+        transition: 0.5s;
+    }
+
+    nav>ul {
+        position: relative;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 80%;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        list-style: none;
+    }
+
+    nav>ul>li {
+        display: block;
+        width: 100%;
+    }
+
+    nav>ul>li>a {
+        display: block;
+        width: 100%;
+        padding: 0.5vh 0;
+        text-align: center;
+        font-family: 'lato', sans-serif;
+        font-weight: 400;
+        font-size: var(--medium-font);
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+
+    /*burger-menu*/
+    .burger-menu {
+        display: block;
+    }
+
+    /*introduction*/
+    .introduction>.introduction-text>h1 {
+        transform: translate(0%, -30%);
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    main>.introduction>.introduction-text>h2 {
+        transform: translate(0%, 10%);
+        font-size: var(--very-big-font);
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -14px #0086df, 0px -28px #0086df;
+    }
+
+    .introduction>.blinking-texts>.html {
+        top: 20%;
+        left: 10%;
+    }
+
+    .introduction>.blinking-texts>.css {
+        top: 15%;
+        left: 40%;
+    }
+
+    .introduction>.blinking-texts>.javascript {
+        top: 80%;
+        left: 15%;
+    }
+
+    .introduction>.blinking-texts>.react {
+        top: 25%;
+        left: 45%;
+    }
+
+    .introduction>.blinking-texts>.vue {
+        top: 80%;
+        left: 75%;
+    }
+
+    .introduction>.blinking-texts>.mongodb {
+        top: 75%;
+        left: 40%;
+    }
+
+    /*skills*/
+
+    .skills>.welcome {
+        height: 40vh;
+    }
+
+    .skills>.welcome>div {
+        width: 100%;
+        padding: 0 25px;
+        font-weight: 300;
+        text-shadow: 0px 0px black;
+    }
+
+    .skills>.skills-banner {
+        float: none;
+        width: 100%;
+        justify-content: center;
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .skills>.skills-banner>.letter {
+        transform: skewY(0deg);
+    }
+
+    .skills>.skills-list {
+        float: none;
+        width: 100%;
+        /* height: 580vh; */
+        padding-top: 10vh;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        opacity: 0%;
+    }
+
+    .skills>.skills-list>.skill {
+        width: 60%;
+    }
+
+    .skills>.skills-list>.skill>.skill-front>h1 {
+        padding: 2vh 5px;
+        font-size: var(--medium-font);
+        font-family: "lato", sans-serif;
+        font-weight: 300;
+        line-height: 5vh;
+    }
+
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 30vh;
+        line-height: 30vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill.flip>.skill-back>p {
+        padding: 1vh;
+        text-align: justify;
+        font-size: var(--small-font);
+        font-family: "lato", sans-serif;
+        font-weight: 300;
+    }
+
+    /*about*/
+    .about>.about-banner-slash-text {
+        position: none;
+        width: 100%;
+        height: 300px;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        color: grey;
+    }
+
+    .about>.about-banner-slash-text.blinking {
+        animation: banner-anim 0.6s ease-in-out forwards;
+    }
+
+    .about>.about-banner-slash-text>.top,
+    .about>.about-banner-slash-text>.bottom {
+        text-align: center;
+        font: var(--banner-font) / 100px cursive;
+        font-family: "Monoton", cursive;
+        font-weight: 100;
+        text-transform: uppercase;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .about>.about-banner-slash-text>.top::before,
+    .about>.about-banner-slash-text>.bottom::before {
+        content: attr(title);
+        transform: rotate(0deg);
+        padding: 0 30px;
+    }
+
+    .about>.about-banner-slash-text>.top {
+        position: none;
+        top: 0;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+    }
+
+    .about>.about-banner-slash-text>.top::before {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+    }
+
+    .about>.about-banner-slash-text>.bottom {
+        display: none;
+    }
+
+    .about>.about-banner-slash-text>.bottom::before {
+        display: none;
+    }
+
+    .about>.introduction {
+        height: 18vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    .about>.introduction>div:nth-child(1) {
+        position: relative;
+        height: 6vh;
+        width: 100%;
+    }
+
+    .about>.introduction>div:nth-child(2) {
+        position: relative;
+        height: 12vh;
+        width: 100%;
+    }
+
+    .about>.introduction>div>h1 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .about>.introduction>div:nth-child(2)>h1 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0 80px;
+        text-align: center;
+    }
+
+    .about>.profile {
+        width: 100%;
+        height: calc(20px + 276px + 70vh);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .about>.profile>img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 20px);
+        float: none;
+        width: 360px;
+        height: 276px;
+        margin-right: 0;
+        padding: 0 42px;
+        border-radius: 50%;
+        opacity: 0;
+    }
+
+    .about>.profile>img.visible {
+        animation: show2-anim 2s 2s linear forwards;
+    }
+
+    .about>.profile>.description {
+        position: relative;
+        top: 296px;
+        left: 0px;
+        float: none;
+        width: 100%;
+        height: 70vh;
+        margin-left: 0%;
+        margin-right: 0%;
+        text-indent: 15%;
+        text-align: justify;
+        font-size: var(--description-font);
+        font-family: "lato", sans-serif;
+        font-weight: 300;
+        color: white;
+    }
+
+    .about>.profile>.description>.first {
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: -100vw;
+        width: 100%;
+        padding: 0 30px;
+        opacity: 0;
+        color: white;
+    }
+
+    .about>.profile>.description>.second {
+        position: absolute;
+        bottom: 0;
+        left: -100vw;
+        width: 100%;
+        padding: 0 30px;
+        opacity: 0;
+        background: -webkit-linear-gradient(white, white, #38495a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gallery {
+        height: 112vh;
+    }
+
+    .clipped-border {
+        -webkit-clip-path: polygon(50% 0%,
+                95% 25%,
+                95% 75%,
+                50% 100%,
+                5% 75%,
+                5% 25%);
+        clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+        padding: 3px;
+        background: linear-gradient(grey, lightgrey);
+        max-height: var(--hexagon-size);
+        max-width: var(--hexagon-size);
+        height: var(--height);
+        width: var(--width);
+        transition: transform 0.2s;
+        position: absolute;
+        top: calc(15% - var(--hexagon-size) / 2 + 0px);
+        left: calc(50% - var(--hexagon-size) + 0px);
+    }
+
+    .clipped-border:nth-child(2) {
+        top: calc(15% - var(--hexagon-size)/2 + 0px);
+        left: calc(50% + 0px);
+    }
+
+    .clipped-border:nth-child(3) {
+        top: calc(15% + var(--hexagon-size)/2 + 0px);
+        left: calc(50% - var(--hexagon-size) / 2 + 0px);
+    }
+
+    .clipped-border:nth-child(4) {
+        top: calc(15% + var(--hexagon-size) + var(--hexagon-size) / 2 + 0px);
+        left: calc(50% - var(--hexagon-size) + 0px);
+    }
+
+    .clipped-border:nth-child(5) {
+        top: calc(15% + var(--hexagon-size) + var(--hexagon-size) / 2 + 0px);
+        left: calc(50% + 0px);
+    }
+
+    .clipped-border:nth-child(6) {
+        top: calc(15% + var(--hexagon-size) / 2 + var(--hexagon-size) * 2 + 0px);
+        left: calc(50% - var(--hexagon-size) / 2 + 0px);
+    }
+
+    .clipped-border:nth-child(7) {
+        top: calc(15% + var(--hexagon-size) / 2 + var(--hexagon-size)*3 + 0px);
+        left: calc(50% - var(--hexagon-size) + 0px);
+    }
+
+    .clipped-border:nth-child(8) {
+        top: calc(15% + var(--hexagon-size) / 2 + var(--hexagon-size)*3 + 0px);
+        left: calc(50% + 0px);
+    }
+
+    .clipped-border:before {
+        content: "";
+        position: absolute;
+        opacity: 0.5;
+        width: 250px;
+        height: 60px;
+        background: white;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: rotate(45deg);
+        transition: transform 0.5s;
+    }
+
+    /*projects*/
+
+    .projects {
+        position: none;
+        padding-top: 0;
+    }
+
+    .projects>.projects-banner {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    .projects>.projects-banner>h1 {
+        display: block;
+        padding: 0 0 0 0;
+        writing-mode: horizontal-tb;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: var(--banner-font);
+        letter-spacing: 0;
+        font-family: 'Monoton', cursive;
+        font-weight: 100;
+        color: gray;
+    }
+
+    .projects>.projects-info {
+        float: none;
+        display: block;
+        width: 100%;
+        position: static;
+        transform: translate(0, 0);
+    }
+
+    .projects-info>.pokedex-project {
+        padding-top: 8vh;
+        transform: perspective(100px) rotateY(5deg);
+        opacity: 0;
+    }
+
+    .projects-info>.first-website-project {
+        padding-top: 8vh;
+        transform: perspective(100px) rotateY(-5deg);
+        opacity: 0;
+    }
+
+    @keyframes show-pokedex-project-anim {
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    @keyframes show-first-website-project-anim {
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    /*contact*/
+    .contact {
+        margin-top: 2vh;
+    }
+
+    .contact>.contact-banner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        padding: 30px 0 30px 0;
+        text-align: center;
+        font-family: 'Monoton', cursive;
+        font-weight: 100;
+        font-size: var(--banner-font);
+        letter-spacing: 0;
+        text-transform: uppercase;
+        color: grey;
+        text-shadow: 5px 5px black;
+        cursor: default;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 80%;
+        margin: 0 auto;
+        font-family: 'lato', sans-serif;
+        font-weight: 300;
+        font-size: var(--medium-font);
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+
+    .contact>.contact-form-and-info>.contact-form {
+        float: none;
+    }
+
+    .contact>.contact-form-and-info>.contact-form>form>div>button {
+        display: block;
+        width: 40%;
+        margin: 0 auto 5vh auto;
+        height: 5vh;
+        line-height: 3vh;
+        font-family: 'lato', sans-serif;
+        font-weight: 400;
+        font-size: 3vh;
+        text-transform: uppercase;
+        border: 2px solid black;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .contact>.contact-form-and-info>.contact-info>h1 {
+        padding: 2vh 0;
+        font-size: var(--medium-font);
+    }
+
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 20px;
+    }
+
+    .contact>.contact-form-and-info>.contact-info {
+        float: none;
+    }
+
+    /*footer*/
+
+    footer {
+        margin-top: 20px;
+    }
+
+}

@@ -1,70 +1,64 @@
 /*projects*/
-main>.projects {
+.projects {
     position: relative;
     cursor: default;
+    padding-top: 0vh;
 }
 
-main>.projects>.projects-banner {
-    float: right;
+.projects>.projects-banner {
+    float: left;
+    padding-top: 20vh;
     width: 25%;
-}
-
-main>.projects>.projects-banner>h1 {
     display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 12vh 0 2vh 0;
-    writing-mode: vertical-lr;
+    flex-direction: column;
+    color: grey;
+    opacity: 30%;
+}
+
+.projects>.projects-banner>.letter {
     text-transform: uppercase;
+    text-align: center;
     font-size: var(--banner-font);
-    letter-spacing: 5vh;
-    font-family: 'Monoton', cursive;
+    font-family: "Monoton", cursive;
     font-weight: 100;
-    color: gray;
+    transform: skewY(15deg);
 }
 
-main>.projects>.projects-banner>h1.blinking {
-    animation: banner-anim 0.3s ease-in-out forwards;
+.projects>.projects-banner.blinking {
+    animation: banner-anim 0.6s ease-in-out forwards;
+    opacity: 100%;
 }
 
-
-main>.projects>.projects-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.projects>.projects-info {
+    float: right;
     width: 75%;
     height: 100%;
-    font-family: "Roboto", sans-serif;
-    color: white;
+    padding-top: 30vh;
+    padding-right: 20vh;
 }
 
-main>.projects>.projects-info>.message {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70%;
+.projects>.projects-info>.first-website-project,
+.projects>.projects-info>.upcoming-project {
+    margin-top: 20vh;
+}
+
+.project-description {
+    margin-top: 5vh;
     text-align: center;
-    transform: translate(-50%, -50%) rotate(45deg);
-    font-size: var(--large-font);
-    text-transform: uppercase;
-    text-shadow: 6px 6px black;
-    border: 2px solid white;
-    box-shadow: 8px 8px black;
+    font-size: var(--description-font);
+    font-weight: 300;
+    letter-spacing: 0px;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-main>.projects>.projects-info>.upcoming {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 50%;
-    width: 50%;
-    padding-top: 24vh;
-    font-size: var(--small-font);
-    text-shadow: 2px 2px black;
+.projects>.projects-info img {
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.projects>.projects-info a:hover img {
+    transform: scale(1.1);
+    box-shadow: 30px 30px 20px rgba(0, 0, 0, 0.5);
 }

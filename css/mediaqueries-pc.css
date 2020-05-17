@@ -1,0 +1,625 @@
+@media(width: 2560px) and (height: 1440px) {
+    :root {
+        --banner-font: 220px;
+        --large-font: 140px;
+        --very-big-font: 100px;
+        --big-font: 80px;
+        --medium-font: 60px;
+        --description-font: 40px;
+        --small-font: 35px;
+        --very-small-font: 30px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 650px;
+    }
+
+    nav>ul>li {
+        width: 10%;
+    }
+
+    .skills>.skills-list>.skill {
+        width: 30%;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 30%;
+    }
+
+    .about>.profile>.description {
+        height: 640px;
+    }
+
+    .gallery {
+        height: 160vh;
+    }
+
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -50px #0086df, 0px -100px #0086df;
+    }
+
+    .clipped-border:before {
+        width: 850px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 1680px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 140px;
+        --large-font: 85px;
+        --very-big-font: 76px;
+        --big-font: 66px;
+        --medium-font: 38px;
+        --description-font: 28px;
+        --small-font: 22px;
+        --very-small-font: 18px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 420px;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    /*skills*/
+
+    .skills>.skills-list {
+        /* height: 220vh; */
+    }
+
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 24vh;
+        line-height: 24vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 30%;
+    }
+
+    /*about-me*/
+    .about>.profile>.description {
+        height: 400px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 150vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 50%;
+    }
+
+    /*footer*/
+}
+
+@media (max-width: 1600px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 140px;
+        --large-font: 82px;
+        --very-big-font: 74px;
+        --big-font: 62px;
+        --medium-font: 36px;
+        --description-font: 25px;
+        --small-font: 22px;
+        --very-small-font: 18px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 400px;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    /*skills*/
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 24vh;
+        line-height: 24vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 30%;
+    }
+
+    /*about-me*/
+    .about>.profile>.description {
+        height: 400px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 167vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 50%;
+    }
+
+    /*footer*/
+}
+
+@media (max-width: 1440px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 135px;
+        --large-font: 70px;
+        --very-big-font: 68px;
+        --big-font: 58px;
+        --medium-font: 34px;
+        --description-font: 24px;
+        --small-font: 20px;
+        --very-small-font: 16px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 360px;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    /*skills*/
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 24vh;
+        line-height: 24vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 30%;
+    }
+
+    /*about-me*/
+    .about>.profile>.description {
+        height: 360px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 150vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 50%;
+    }
+
+    /*footer*/
+}
+
+@media (max-width: 1366px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 120px;
+        --large-font: 65px;
+        --very-big-font: 55px;
+        --big-font: 45px;
+        --medium-font: 30px;
+        --description-font: 20px;
+        --small-font: 18px;
+        --very-small-font: 15px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 350px;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    /*skills*/
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 24vh;
+        line-height: 24vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 30%;
+    }
+
+    /*about-me*/
+    .about>.profile>.description {
+        height: 342px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 178vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 50%;
+    }
+
+    /*footer*/
+}
+
+@media (max-width: 1280px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 122px;
+        --large-font: 60px;
+        --very-big-font: 55px;
+        --big-font: 45px;
+        --medium-font: 30px;
+        --description-font: 20px;
+        --small-font: 18px;
+        --very-small-font: 15px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 350px;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    /*skills*/
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 24vh;
+        line-height: 24vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 30%;
+    }
+
+    /*about-me*/
+    .about>.profile>.description {
+        height: 320px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 166vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .clipped-border:hover {
+        transform: scale(1.6);
+        transition: transform 0.2s;
+        z-index: 10;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 50%;
+    }
+
+    /*footer*/
+}
+
+@media (width: 1280px) and (height: 1024px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 128px;
+        --large-font: 64px;
+        --very-big-font: 58px;
+        --big-font: 48px;
+        --medium-font: 34px;
+        --description-font: 22px;
+        --small-font: 20px;
+        --very-small-font: 18px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 350px;
+    }
+
+    /*nav*/
+    nav>ul>li {
+        width: 12%;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-texts>.css {
+        left: 70%;
+    }
+
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    /*skills*/
+
+    .skills>.skills-list {
+        /* height: 220vh; */
+        padding-top: 8vh;
+        padding-right: 10vh;
+    }
+
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 18vh;
+        line-height: 18vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill {
+        width: 40%;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 40%;
+    }
+
+
+    /*about-me*/
+    .about>.about-banner-slash-text {
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        color: grey;
+    }
+
+    .about>.profile>.description {
+        height: 320px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 130vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .clipped-border:hover {
+        transform: scale(1.6);
+        transition: transform 0.2s;
+        z-index: 10;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 60%;
+    }
+
+    /*footer*/
+}
+
+@media (width: 1280px) and (height: 720px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 122px;
+        --large-font: 60px;
+        --very-big-font: 55px;
+        --big-font: 45px;
+        --medium-font: 30px;
+        --description-font: 20px;
+        --small-font: 18px;
+        --very-small-font: 15px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 350px;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    /*skills*/
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 24vh;
+        line-height: 24vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 30%;
+    }
+
+    /*about-me*/
+    .about>.profile>.description {
+        height: 320px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 170vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .clipped-border:hover {
+        transform: scale(1.6);
+        transition: transform 0.2s;
+        z-index: 10;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 50%;
+    }
+
+    /*footer*/
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+
+    /*variables*/
+    :root {
+        --banner-font: 110px;
+        --large-font: 60px;
+        --very-big-font: 55px;
+        --big-font: 39px;
+        --medium-font: 28px;
+        --description-font: 20px;
+        --small-font: 18px;
+        --very-small-font: 15px;
+        --width: 100%;
+        --height: 100%;
+        --border-width: 200px;
+        --border-height: 200px;
+        --hexagon-size: 280px;
+    }
+
+    /*nav*/
+    nav>ul>li {
+        width: 14%;
+    }
+
+    /*introduction*/
+    .introduction>.blinking-arrow>.fa-star {
+        text-shadow: 0px -22px #0086df, 0px -44px #0086df;
+    }
+
+    .introduction>.blinking-texts>.javascript {
+        top: 80%;
+        left: 15%;
+    }
+
+    /*skills*/
+    .skills>.skills-list {
+        /* height: 240vh; */
+        padding-top: 8vh;
+        padding-right: 10vh;
+    }
+
+    .skills>.skills-list>.skill>.skill-front>i {
+        font-size: 20vh;
+        line-height: 20vh;
+        padding-bottom: 2vh;
+    }
+
+    .skills>.skills-list>.skill {
+        width: 40%;
+    }
+
+    .skills>.skills-list>.skill:nth-child(10),
+    .skills>.skills-list>.skill:nth-child(11) {
+        width: 40%;
+    }
+
+    /*about-me*/
+    .about>.profile>.description {
+        height: 320px;
+    }
+
+    .gallery {
+        position: relative;
+        height: 146vh;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .clipped-border:before {
+        height: 150px;
+    }
+
+    .clipped-border:hover {
+        transform: scale(1.8);
+        transition: transform 0.2s;
+        z-index: 10;
+    }
+
+    /*projects*/
+
+    /*contact*/
+    .contact>.contact-form-and-info>.contact-info>div>i {
+        padding-right: 1vw;
+    }
+
+    .contact>.contact-form-and-info {
+        width: 70%;
+    }
+
+    /*footer*/
+}

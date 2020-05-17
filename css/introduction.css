@@ -281,7 +281,7 @@ main>.introduction {
     animation-delay: 1609ms;
 }
 
-main>.introduction>.introduction-text {
+.introduction>.introduction-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -289,7 +289,7 @@ main>.introduction>.introduction-text {
     width: 80%;
 }
 
-main>.introduction>.introduction-text>h1 {
+.introduction>.introduction-text>h1 {
     font-size: var(--large-font);
     transform: translate(-10%, -10%);
     text-align: center;
@@ -341,41 +341,7 @@ main>.introduction>.introduction-text>h2 {
     -webkit-text-fill-color: transparent;
 }
 
-main>.introduction>.blinking-arrow {
-    position: absolute;
-    left: 50%;
-    bottom: 7%;
-    transform: translateX(-50%);
-    width: 4vh;
-    height: 6vh;
-}
-
-main>.introduction>.blinking-arrow>.fa-star {
-    position: absolute;
-    top: -60%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: var(--very-small-font);
-    color: #0086df;
-    text-shadow: 0px -30px #0086df, 0px -60px #0086df;
-    animation: star-anim 3s 1.5s linear infinite;
-    opacity: 0;
-}
-
-main>.introduction>.blinking-arrow>.text {
-    position: relative;
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    font-family: 'lato', sans-serif;
-    font-weight: 300;
-    font-size: var(--small-font);
-    color: white;
-    animation: go-down-anim 3s 1.5s linear infinite;
-    opacity: 0;
-}
-
-main>.introduction>.blinking-texts {
+.introduction>.blinking-texts {
     position: absolute;
     top: 0;
     left: 0;
@@ -388,56 +354,68 @@ main>.introduction>.blinking-texts {
     font-weight: 300;
 }
 
-main>.introduction>.blinking-texts>.html {
+.introduction>.blinking-texts>.html {
     position: absolute;
     top: 20%;
     left: 10%;
-    color: rgb(156, 220, 254);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df,
+        0 0 40px #0086df, 0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
+    color: white;
     opacity: 0%;
-    animation: blinking-skill-anim 6s 0.5s linear infinite normal;
+    animation: blinking-skill-anim 8s 1s linear infinite normal;
 }
 
-main>.introduction>.blinking-texts>.css {
+.introduction>.blinking-texts>.css {
     position: absolute;
     top: 30%;
     left: 80%;
-    color: rgb(195, 96, 44);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df,
+        0 0 40px #0086df, 0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
+    color: white;
     opacity: 0%;
-    animation: blinking-skill-anim 6s 2s linear infinite normal;
+    animation: blinking-skill-anim 8s 2s linear infinite normal;
 }
 
-main>.introduction>.blinking-texts>.javascript {
+.introduction>.blinking-texts>.javascript {
     position: absolute;
     top: 60%;
     left: 15%;
-    color: rgb(156, 220, 254);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df,
+        0 0 40px #0086df, 0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
+    color: white;
     opacity: 0%;
-    animation: blinking-skill-anim 6s 3s linear infinite normal;
+    animation: blinking-skill-anim 8s 3s linear infinite normal;
 }
 
-main>.introduction>.blinking-texts>.react {
+.introduction>.blinking-texts>.react {
     position: absolute;
     top: 25%;
     left: 45%;
-    color: rgb(195, 96, 44);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df,
+        0 0 40px #0086df, 0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
+    color: white;
     opacity: 0%;
-    animation: blinking-skill-anim 6s 4s linear infinite normal;
+    animation: blinking-skill-anim 8s 4s linear infinite normal;
 }
 
-main>.introduction>.blinking-texts>.vue {
+.introduction>.blinking-texts>.vue {
     position: absolute;
     top: 80%;
     left: 75%;
-    color: rgb(156, 220, 254);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df,
+        0 0 40px #0086df, 0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
+    color: white;
     opacity: 0%;
-    animation: blinking-skill-anim 6s 5s linear infinite normal;
+    animation: blinking-skill-anim 8s 5s linear infinite normal;
 }
 
-main>.introduction>.blinking-texts>.mongodb {
+.introduction>.blinking-texts>.mongodb {
     position: absolute;
     top: 75%;
     left: 40%;
-    color: rgb(195, 96, 44);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df,
+        0 0 40px #0086df, 0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
+    color: white;
     opacity: 0%;
-    animation: blinking-skill-anim 6s 6s linear infinite normal;
+    animation: blinking-skill-anim 8s 6s linear infinite normal;
 }

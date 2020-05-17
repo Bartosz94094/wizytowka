@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Front-end developer working in technologies such as React, JavaScript, HTML and CSS. I design websites for desktops and mobile devies">
     <title>Bartosz Czechowicz - web developer</title>
     <script src="https://kit.fontawesome.com/fd865ac167.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
@@ -26,17 +28,26 @@
             });
         });
     </script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <nav>
-        <ul>
-            <li><a class="introduction-btn" href="#introduction"><i class="fas fa-rocket"></i>Introduction</a></li>
-            <li><a class="skills-btn" href="#skills"><i class="fas fa-rocket"></i>Skills</a></li>
-            <li><a class="aboutme-btn" href="#about"><i class="fas fa-rocket"></i>About me</a></li>
-            <li><a class="projects-btn" href="#projects"><i class="fas fa-rocket"></i>Projects</a></li>
-            <li><a class="contact-btn" href="#contact"><i class="fas fa-rocket"></i>Contact</a></li>
+        <div class="logo">
+            <h4>Bartosz Czechowicz</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a class="current" href="#introduction">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </nav>
     <main>
         <section class="introduction" id="introduction">
@@ -66,10 +77,6 @@
                 <h1>Bartosz Czechowicz</h1>
                 <h2>Front-end developer</h2>
             </div>
-            <div class="blinking-arrow">
-                <i class="fas fa-star"></i>
-                <p class="text">Go down...</p>
-            </div>
             <div class="blinking-texts">
                 <p class="html">HTML</p>
                 <p class="css">CSS + SASS/SCSS</p>
@@ -97,7 +104,8 @@
                 <div class="letter">}</div>
             </div>
             <div class="skills-list">
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>HTML5</h1><i class="fab fa-html5"></i>
                     </div>
@@ -107,7 +115,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>CSS3 + SASS/SCSS</h1><i class="fab fa-css3-alt"></i>
                     </div>
@@ -119,35 +128,36 @@
                             World Wide Web, alongside HTML and JavaScript.</p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>JavaScript (ES5 & ES6)</h1><i class="fab fa-js-square"></i>
                     </div>
                     <div class="skill-back">
-                        <p>JavaScript, often abbreviated as JS, is a high-level, often just-in-time compiled, and
+                        <p>JavaScript is a high-level, often just-in-time compiled, and
                             multi-paradigm programming language. It has curly-bracket syntax, dynamic typing,
                             prototype-based
                             object-orientation, and first-class functions.<br /> <br /> Alongside HTML and CSS,
                             JavaScript is one of the core technologies of the World Wide Web.
-                            JavaScript enables interactive web pages and is an essential part of web applications.
                         </p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>React.js + React Router</h1><i class="fab fa-react"></i>
                     </div>
                     <div class="skill-back">
                         <p>React.js is a JavaScript library for building user
-                            interfaces. It is maintained by Facebook and a community of individual developers and
-                            companies.<br /> <br /> React can be used as a base in the development of single-page or
-                            mobile applications.
+                            interfaces. React can be used as a base in the development of single-page or
+                            mobile applications.<br /> <br />
                             However, React is only concerned with rendering data to the DOM, and so creating React
                             applications usually requires the use of additional libraries for state management and
-                            routing. Redux and React Router are respective examples of such libraries.</p>
+                            routing (i.a. Redux or React Router).</p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>Vue.js</h1><i class="fab fa-vuejs"></i>
                     </div>
@@ -157,12 +167,12 @@
                             architecture that focuses on declarative rendering and component composition.<br />
                             <br />Vue.js lets you extend HTML with
                             HTML attributes called directives. The directives offer
-                            functionality to HTML applications, and come as either built-in or user defined
-                            directives.
+                            functionality to HTML applications.
                         </p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>MongoDB</h1><i class="fas fa-database"></i>
                     </div>
@@ -171,7 +181,19 @@
                             database program, MongoDB uses JSON-like documents with schema.</p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
+                    <div class="skill-front">
+                        <h1>Bootstrap</h1><i class="fab fa-bootstrap"></i>
+                    </div>
+                    <div class="skill-back">
+                        <p>Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype
+                            your ideas or build your entire app with Sass variables and mixins, responsive grid
+                            system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>Git & GitHub</h1><i class="fab fa-github"></i>
                     </div>
@@ -183,7 +205,8 @@
                             support for distributed, non-linear workflows.</p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>AJAX</h1><i class="far fa-file-code"></i>
                     </div>
@@ -194,7 +217,8 @@
                             object, JavaScript and HTML DOM</p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>Responvie Web Design</h1><i class="fas fa-mobile-alt"></i>
                     </div>
@@ -204,147 +228,188 @@
                             phones)</p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>Java + Hibernate (academic experience)</h1><i class="fab fa-java"></i>
                     </div>
                     <div class="skill-back">
-                        <p>Responsive Web Design (RWD) is about using HTML and CSS to automatically resize, hide,
-                            shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and
-                            phones</p>
+                        <p>Java is a general-purpose programming language that is class-based, object-oriented, and
+                            designed to have as few implementation dependencies as possible. It is intended to let
+                            application developers write once, run anywhere meaning that compiled Java code can run on
+                            all platforms that support Java without the need for recompilation.</p>
                     </div>
                 </div>
-                <div class="skill">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-once="true" class="skill">
                     <div class="skill-front">
                         <h1>SQL (academic experience)</h1><i class="fas fa-server"></i>
                     </div>
                     <div class="skill-back">
                         <p>SQL (Structured Query Language) is a domain-specific language used in programming and
                             designed for managing data held in a relational database management system (RDBMS), or for
-                            stream processing in a relational data stream management system (RDSMS). It is particularly
-                            useful in handling structured data, i.e. data incorporating relations among entities and
-                            variables.</p>
+                            stream processing in a relational data stream management system (RDSMS).</p>
                     </div>
                 </div>
             </div>
-            <div class="message">
-                <p>click</p>
-                <i class="fas fa-arrow-down"></i>
-            </div>
+            <aside class="favourite">
+                <div class="text"><span class="first">But thing I like the most is...</span><span
+                        class="second">React</span></div>
+            </aside>
         </section>
-        <section class="about" id="about">
-            <div class="about-banner-slash-text">
-                <div title="about me" class="top"></div>
-                <div title="about me" class="bottom"></div>
+        <section class="about clearfix" id="about">
+            <div class="about-banner">
+                <div class="letter">{</div>
+                <div class="letter">a</div>
+                <div class="letter">b</div>
+                <div class="letter">o</div>
+                <div class="letter">u</div>
+                <div class="letter">t</div>
+                <div class="letter">_</div>
+                <div class="letter">m</div>
+                <div class="letter">e</div>
+                <div class="letter">}</div>
             </div>
-            <div class="introduction">
-                <div class="first-txt">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
+            <div class="info">
+                <div class="intro">
+                    <div class="first">
+                        <h5>Hi!</h5>
+                    </div>
+                    <div class="second">
+                        <h1>My name is Bartosz Czechowicz</h1>
+                    </div>
+                    <div class="third">
+                        <h1>I'm a junior front-end deweloper</h1>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                        class="background-intro"></div>
                 </div>
-                <div class="second-txt">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                </div>
-            </div>
-            </div>
-            <div class="profile clearfix">
-                <p class="description">Quaerat rem laborum laboriosam error molestias doloribus
-                    atque. Nobis, laborum iure nostrum exercitationem sequi deleniti reprehenderit ut labore
-                    excepturi
-                    sint, voluptatem rerum? Iure fuga deserunt minima, dolores veniam libero. Eaque eum, doloribus
-                    vitae
-                    ipsam recusandae cum corporis quos at reiciendis dolore illum fugit adipisci similique velit
-                    omnis
-                    minus, maxime saepe voluptatibus numquam earum illo repellendus ipsum asperiores. Impedit quidem
-                    eius accusantium in provident ipsum. Ex fugit voluptate aliquam modi debitis quam, blanditiis
-                    voluptates minima voluptatem similique ab aliquid atque nulla ducimus totam recusandae iure
-                    ullam
-                    molestias optio!</p>
-                <img src="images/bartosz_czechowicz.jpg" alt="bartosz_czechowicz" class="photo">
-            </div>
-            <div class="my-photos">
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel1.jpg')">
+                <div class="description">
+                    <div data-aos="fade-right" data-aos-duration="1500" data-aos-anchor-placement="top-center"
+                        class="first-line clearfix">
+                        <div class="picture-bartek-container">
+                            <img class=" picture-bartek" src="/images/bartek.jpg" alt="bartosz_czechowicz">
                         </div>
-                        <div class="title">
-                            Annapurna Circuit
+                        <p class="first">Nice to meet you. Welcome to my website! My journey with
+                            programming
+                            started a
+                            couple of years ago,
+                            when I was studying Mechatronics Engineering at Rzeszow University of Technology. I fell in
+                            love
+                            with it. Then I decided to study IT for my master's degree (in Poznan now) and keep focus on
+                            front-end
+                            technologies. Now,
+                            I'm looking for a first job or internship as a developer! You can check my skills above.</p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500" data-aos-anchor-placement="top-center"
+                        class="second-line clearfix">
+                        <p class="second">
+                            Aparat from coding, there are three things I'm really into. First one is travelling. After
+                            graduating I took a gap year to travel and spent it in Asia (but not only there), visiting
+                            14
+                            countries, i.a. working
+                            as a volunteer in Japan. Second one is photography, you can find some of my pictures (or
+                            pictures of me) at the end of this section.
+                            Last, but not
+                            least is muay thai, a thai martial art I can't live without.
+                        </p>
+                        <div class="picture-work-container">
+                            <img class="picture-work" src="/images/work.jpg" alt="work">
                         </div>
                     </div>
-                </div>
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel2.jpg')">
+                    <div data-aos="fade-right" data-aos-duration="1500" data-aos-anchor-placement="top-center"
+                        class="third-line clearfix">
+                        <div class="picture-now-container">
+                            <img class=" picture-now" src="/images/now.jpg" alt="bartosz_czechowicz">
                         </div>
-                        <div class="title">
-                            Nepal, Kathmandu
-                        </div>
+                        <p class="third">What do I do now? So, in this year I graduate - I'm quite busy with working
+                            on my dissertation (online store using React and React Router). In my spare time I write
+                            articles about
+                            upcoming hardware for PCLab.pl and KomputerSwiat.pl. Oh, and I sell my travel texts and
+                            pictures as well.
+                        </p>
                     </div>
-                </div>
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel3.jpg')">
-                        </div>
-                        <div class="title">
-                            Malaysia, Kuala Lumpur
-                        </div>
-                    </div>
-                </div>
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel4.jpg')">
-                        </div>
-                        <div class="title">
-                            Japan, Kyoto, Gion District
-                        </div>
-                    </div>
-                </div>
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel5.jpg')">
-                        </div>
-                        <div class="title">
-                            Israel, Haifa
-                        </div>
-                    </div>
-                </div>
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel6.jpg')">
-                        </div>
-                        <div class="title">
-                            Morocco, Chefchaouen
-                        </div>
-                    </div>
-                </div>
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel7.jpg')">
-                        </div>
-                        <div class="title">
-                            Some competitions ;)
-                        </div>
-                    </div>
-                </div>
-                <div class="photo">
-                    <div class="photo-box">
-                        <div class="image" style="background-image: url('images/travel8.jpg')">
-                        </div>
-                        <div class="title">
-                            Thailand, Chiang Mai
-                        </div>
-                    </div>
+                    <div data-aos="fade-down" data-aos-duration="1500" data-aos-anchor-placement="top-center"
+                        class="background-first-desc"></div>
+                    <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="top-center"
+                        class="background-second-desc"></div>
                 </div>
             </div>
+            <div class="gallery">
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel1.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel2.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel3.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel4.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel5.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel6.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel7.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="clipped-border">
+                    <img src="images/travel8.jpg" id="clipped">
+                </div>
+                <div data-aos="fade-down" data-aos-duration="1200" data-aos-anchor-placement="top-center"
+                    class="background-gallery"></div>
+            </div>
+            <aside class="hobby">
+                <div class="image"></div>
+                <div class="text">Ok, it seems I'm really into taking pictures</div>
+            </aside>
         </section>
         <section class="projects clearfix" id="projects">
             <div class="projects-banner">
-                <h1>[projects]</h1>
+                <div class="letter">{</div>
+                <div class="letter">p</div>
+                <div class="letter">r</div>
+                <div class="letter">o</div>
+                <div class="letter">j</div>
+                <div class="letter">e</div>
+                <div class="letter">c</div>
+                <div class="letter">t</div>
+                <div class="letter">s</div>
+                <div class="letter">}</div>
             </div>
             <div class="projects-info">
-                <p class="message">coming soon</p>
-                <p class="upcoming">Now I'm working on online store in Single Page Application model (using React.js
-                    and
-                    React Router). It's a part of my dissertation.</p>
+                <div class="pokedex-project">
+                    <a href="" target="_blank">
+                        <img src="/images/pokedex.jpg" alt="pokedex">
+                    </a>
+                    <p class="project-description">Pokedex App (using React, React Router, Bootstrap and PokeAPI)</p>
+                </div>
+                <div class="first-website-project">
+                    <a href="" target="_blank">
+                        <img src="/images/first_website.png" alt="first_website">
+                    </a>
+                    <p class="project-description">My very first website (HTML + CSS - quite old, but this is how I
+                        started)</p>
+                </div>
+                <div class="upcoming-project">
+                    <a href="" target="_blank">
+                        <img src="/images/coming_soon.jpg" alt="first_website">
+                    </a>
+                    <p class="project-description">Online store using React and React Router - it's a part of my
+                        dissertation</p>
+                </div>
             </div>
         </section>
         <section class="contact" id="contact">
@@ -374,14 +439,23 @@
                     <div class="mail"><i class="fas fa-envelope"></i>bartosz7czechowicz@gmail.com</div>
                     <div class="phone-number"><i class="fas fa-phone-square-alt"></i>+48 574 577 053</div>
                     <div class="facebook"><i class="fab fa-facebook"></i><a
-                            href="https://www.facebook.com/bartosz.czechowicz.35">Facebook</a></div>
-                    <div class="github"><i class="fab fa-github"></i><a
-                            href="https://github.com/Bartosz94094">GitHub</a></div>
+                            href="https://www.facebook.com/bartosz.czechowicz.35" target="_blank">Facebook</a></div>
+                    <div class="github"><i class="fab fa-github"></i><a href="https://github.com/Bartosz94094"
+                            target="_blank">GitHub</a></div>
                 </div>
             </div>
+            <div data-aos="fade-up" data-aos-duration="2200" data-aos-anchor-placement="center-center"
+                class="background-contact"></div>
         </section>
+        <footer>
+            <h3>&copy;Bartosz Czechowicz, 2020.<i class="fas fa-rocket"></i><i class="fas fa-star"></i></h3>
+        </footer>
     </main>
     <script src="script.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

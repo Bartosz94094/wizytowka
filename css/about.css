@@ -1,209 +1,443 @@
 /*about-TODO*/
 .about {
-    cursor: default;
+  cursor: default;
+  width: 100%;
+  overflow: hidden;
 }
 
-.about>.about-banner-slash-text {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    color: grey;
+.about-banner {
+  float: left;
+  padding-top: 20vh;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  opacity: 30%;
 }
 
-.about>.about-banner-slash-text.blinking {
-    animation: banner-anim 0.3s ease-in-out forwards;
+.about-banner>.letter {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--banner-font);
+  font-family: "Monoton", cursive;
+  font-weight: 100;
+  transform: skewY(15deg);
 }
 
-.about>.about-banner-slash-text>.top,
-.about>.about-banner-slash-text>.bottom {
-    text-align: center;
-    font: var(--banner-font)/100px cursive;
-    font-family: 'Monoton', cursive;
-    font-weight: 100;
-    text-transform: uppercase;
-    text-align: center;
-    overflow: hidden;
+.about-banner.blinking {
+  animation: banner-anim 0.6s ease-in-out forwards;
+  opacity: 100%;
 }
 
-.about>.about-banner-slash-text>.top::before,
-.about>.about-banner-slash-text>.bottom::before {
-    content: attr(title);
-    transform: rotate(5deg);
+.info {
+  float: right;
+  width: 75%;
+  padding-top: 30vh;
+  padding-right: 20vh;
 }
 
-.about>.about-banner-slash-text>.top {
-    position: absolute;
-    top: 0;
-    left: 5px;
-    right: 0;
-    bottom: 50%;
+.intro {
+  position: relative;
+  font-family: "lato", sans-serif;
 }
 
-.about>.about-banner-slash-text>.top::before {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
+.background-intro {
+  position: absolute;
+  top: 10vw;
+  right: 10vw;
+  width: 30vw;
+  height: 30vw;
+  background-image: url(/images/moon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -5;
 }
 
-.about>.about-banner-slash-text>.bottom {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 5px;
-    bottom: 0;
+.intro h1,
+.intro h5 {
+  font-size: var(--big-font);
+  font-weight: 300;
+  letter-spacing: 8px;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about>.about-banner-slash-text>.bottom::before {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    right: 0;
+.intro>.first,
+.intro>.third {
+  text-align: left;
+  width: 100%;
+  transform: translateX(-2%);
+  opacity: 0;
 }
 
-.about>.introduction {
-    height: 20vh;
+.intro>.second {
+  text-align: right;
+  width: 100%;
+  transform: translateX(2%);
+  margin: 8vh 0;
+  opacity: 0;
 }
 
-.about>.introduction>div {
-    position: relative;
-    height: 10vh;
+.intro>div>h1,
+.intro>div>h5 {
+  display: inline-block;
 }
 
-.about>.introduction>div>h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'lato', sans-serif;
-    font-weight: 300;
-    font-size: var(--medium-font);
-    letter-spacing: 2px;
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.intro.visible>.first {
+  animation: show2-anim 0.7s linear forwards, sentence-anim 0.7s linear forwards;
 }
 
-.about>.profile {
-    width: 100%;
+.intro.visible>.second {
+  animation: show2-anim 0.7s 0.7s linear forwards,
+    sentence-anim 0.7s 0.7s linear forwards;
 }
 
-.about>.profile>.description {
-    float: left;
-    width: 60%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-indent: 15%;
-    text-align: justify;
-    font-size: var(--description-font);
-    font-family: 'lato', sans-serif;
-    font-weight: 300;
-    color: white;
-    opacity: 0;
+.intro.visible>.third {
+  animation: show2-anim 0.7s 1.4s linear forwards,
+    sentence-anim 0.7s 1.4s linear forwards;
 }
 
-.about>.profile>.description.visible {
-    animation: show-anim 0.3s linear forwards;
+.intro>.first>h5::after,
+.intro>.third>h1::after {
+  content: "";
+  display: block;
+  width: 5%;
+  height: 2px;
+  background: rgb(236, 106, 219);
+  opacity: 0;
+  margin-top: 3vh;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df, 0 0 40px #0086df,
+    0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
 }
 
-.about>.profile>img {
-    float: right;
-    width: 25%;
-    margin-right: 5%;
-    border-radius: 50%;
-    opacity: 0;
+.intro>.second>h1::after {
+  float: right;
+  content: "";
+  display: block;
+  width: 5%;
+  height: 2px;
+  background: rgb(236, 106, 219);
+  opacity: 0;
+  margin-top: 3vh;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df, 0 0 40px #0086df,
+    0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
 }
 
-.about>.profile>img.visible {
-    animation: show-anim 0.3s linear forwards;
+.intro.visible>.first>h5::after {
+  animation: progress-anim 2s 1.4s linear forwards;
 }
 
-.about>.my-photos {
-    padding: 20vh 5vw 10vh 5vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+.intro.visible>.second>h1::after {
+  animation: progress-anim 2s 1.4s linear forwards;
 }
 
-.about>.my-photos>.photo {
-    position: relative;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
-    margin-bottom: 5vh;
-    cursor: pointer;
+.intro.visible>.third>h1::after {
+  animation: progress-anim 2s 1.4s linear forwards;
 }
 
-.about>.my-photos>.photo>.photo-box {
-    position: relative;
-    z-index: 1;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 30vw;
-    height: 19.995vw;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+.info>.description {
+  position: relative;
+  margin-top: 10vh;
 }
 
-.about>.my-photos>.photo>.photo-box>.image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 5px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.3s;
+.info>.description .picture-bartek-container {
+  width: 50%;
+  float: left;
+  padding: 5%;
 }
 
-.about>.my-photos>.photo>.photo-box>.title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: right;
-    padding: 40px 20px 15px;
-    font-size: 2rem;
-    color: white;
-    text-shadow: 2px 2px black;
+.info>.description .picture-bartek,
+.info>.description .picture-work,
+.info>.description .picture-now {
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
-.about>.my-photos>.photo::before,
-.about>.my-photos>.photo::after {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: #ffffff;
-    border-radius: 5px;
-    transition: transform 0.3s;
+.info>.description .first {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  text-align: justify;
+  font-size: var(--description-font);
+  font-weight: 300;
+  letter-spacing: 0px;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-indent: 14%;
 }
 
-.about>.my-photos>.photo:hover::before {
-    transform: rotate(8deg);
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
+.info>.description .first::before,
+.info>.description .third::before {
+  content: "<>";
+  background: -webkit-linear-gradient(rgb(195, 96, 44), rgb(195, 96, 44));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about>.my-photos>.photo:hover::after {
-    transform: rotate(-8deg);
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
+.info>.description .first::after,
+.info>.description .third::after {
+  content: "</>";
+  background: -webkit-linear-gradient(rgb(195, 96, 44), rgb(195, 96, 44));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about>.my-photos>.photo:hover>.photo-box>.image {
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 80px;
-    background-position: bottom center;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+.info>.description .second::before {
+  content: "{";
+  background: -webkit-linear-gradient(rgb(156, 220, 254), rgb(156, 220, 254));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about>.my-photos>.photo:hover>.photo-box>.title {
-    color: black;
-    text-shadow: none;
+.info>.description .second::after {
+  content: "}";
+  background: -webkit-linear-gradient(rgb(156, 220, 254), rgb(156, 220, 254));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info>.description .picture-work-container {
+  width: 50%;
+  float: right;
+  padding: 5%;
+}
+
+.info>.description .second {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  text-align: justify;
+  font-size: var(--description-font);
+  font-weight: 300;
+  letter-spacing: 0px;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-indent: 14%;
+}
+
+.info>.description .picture-now-container {
+  width: 50%;
+  float: left;
+  padding: 5%;
+}
+
+.info>.description .third {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  text-align: justify;
+  font-size: var(--description-font);
+  font-weight: 300;
+  letter-spacing: 0px;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-indent: 14%;
+}
+
+.info>.description>.first-line,
+.info>.description>.second-line,
+.info>.description>.third-line {
+  position: relative;
+}
+
+.background-first-desc {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(5%);
+  width: 80vw;
+  height: 80vh;
+  background-image: url(/images/cosm1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -500;
+}
+
+.background-second-desc {
+  position: absolute;
+  top: 30%;
+  right: 40%;
+  transform: translateY(0%);
+  width: 40vw;
+  height: 40vh;
+  background-image: url(/images/cosm4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -500;
+}
+
+.gallery {
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 170vh;
+  width: 100%;
+}
+
+.gallery:after {
+  content: "";
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.clipped-border {
+  -webkit-clip-path: polygon(50% 0%,
+      95% 25%,
+      95% 75%,
+      50% 100%,
+      5% 75%,
+      5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  padding: 10px;
+  background: linear-gradient(to right, white, #38495a);
+  max-height: var(--hexagon-size);
+  max-width: var(--hexagon-size);
+  height: var(--height);
+  width: var(--width);
+  transition: transform 0.2s;
+  position: absolute;
+  top: calc(20% - var(--hexagon-size) / 2 + 0px);
+  left: calc(50% - var(--hexagon-size) / 2 + 0px);
+}
+
+.clipped-border:before {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  width: 650px;
+  height: 120px;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+.clipped-border:hover:before {
+  transform: translate(-350px, 400%) rotate(45deg);
+  transition: transform 0.5s;
+}
+
+.clipped-border:nth-child(2) {
+  top: calc(20% - var(--hexagon-size) / 2 + 0px);
+  left: calc(50% - var(--hexagon-size) / 2 + var(--hexagon-size) + 0px);
+}
+
+.clipped-border:nth-child(3) {
+  top: calc(20% - var(--hexagon-size) / 2 + 0px);
+  left: calc(50% - var(--hexagon-size) / 2 - var(--hexagon-size) + 0px);
+}
+
+.clipped-border:nth-child(4) {
+  top: calc(20% + var(--hexagon-size) / 2 + 0px);
+  left: calc(50% - var(--hexagon-size) + 0px);
+}
+
+.clipped-border:nth-child(5) {
+  top: calc(20% + var(--hexagon-size) / 2 + 0px);
+  left: 50%;
+}
+
+.clipped-border:nth-child(6) {
+  top: calc(20% + var(--hexagon-size) / 2 + var(--hexagon-size) + 0px);
+  left: calc(50% - var(--hexagon-size) / 2 + 0px);
+}
+
+.clipped-border:nth-child(7) {
+  top: calc(20% + var(--hexagon-size) / 2 + var(--hexagon-size) + 0px);
+  left: calc(50% - var(--hexagon-size) / 2 + var(--hexagon-size) + 0px);
+}
+
+.clipped-border:nth-child(8) {
+  top: calc(20% + var(--hexagon-size) / 2 + var(--hexagon-size) + 0px);
+  left: calc(50% - var(--hexagon-size) / 2 - var(--hexagon-size) + 0px);
+}
+
+#clipped {
+  -webkit-clip-path: polygon(50% 0%,
+      95% 25%,
+      95% 75%,
+      50% 100%,
+      5% 75%,
+      5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.clipped-border:hover {
+  transform: scale(2) !important;
+  transition: transform 0.4s !important;
+  z-index: 10;
+}
+
+.background-gallery {
+  position: absolute;
+  top: 10vw;
+  bottom: 10vw;
+  left: 10vw;
+  right: 10vw;
+  background-image: url(/images/cosm2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -5;
+  opacity: 0.6;
+}
+
+.hobby {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  float: left;
+}
+
+.hobby>.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/space.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(0px);
+}
+
+.hobby>.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--very-big-font);
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  color: white;
+  border: solid 3px rgb(236, 106, 219);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2vh 0;
+  opacity: 0;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0086df, 0 0 40px #0086df,
+    0 0 50px #0086df, 0 0 60px #0086df, 0 0 70px #0086df;
+}
+
+.hobby.visible>.image {
+  animation: blur-anim 1s linear forwards;
+}
+
+.hobby.visible>.text {
+  animation: show-anim 1s linear forwards;
 }

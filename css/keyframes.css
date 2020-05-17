@@ -110,45 +110,17 @@
     }
 }
 
-@keyframes message-anim {
-    10% {
-        right: 9vw;
-    }
-
-    20% {
-        right: 11vw;
-    }
-
-    30% {
-        right: 9vw;
-    }
-
+@keyframes show2-anim {
     40% {
-        right: 11vw;
-    }
-
-    50% {
-        right: 9vw;
-    }
-
-    60% {
-        right: 11vw;
+        opacity: 0;
     }
 
     70% {
-        right: 9vw;
-    }
-
-    80% {
-        right: 11vw;
-    }
-
-    90% {
-        right: 9vw;
+        opacity: 30%;
     }
 
     100% {
-        right: 11vw;
+        opacity: 100%;
     }
 }
 
@@ -209,11 +181,11 @@
         opacity: 100%;
     }
 
-    20% {
+    10% {
         opacity: 100%;
     }
 
-    25% {
+    15% {
         opacity: 0;
     }
 
@@ -227,19 +199,19 @@
         opacity: 0;
     }
 
-    25% {
+    15% {
         opacity: 0;
     }
 
-    30% {
+    20% {
         opacity: 100%;
     }
 
-    45% {
+    38.33% {
         opacity: 100%;
     }
 
-    50% {
+    43.33% {
         opacity: 0;
     }
 }
@@ -249,19 +221,19 @@
         opacity: 0;
     }
 
-    50% {
+    43.33% {
         opacity: 0;
     }
 
-    55% {
+    48.33% {
         opacity: 100%;
     }
 
-    70% {
+    66.66% {
         opacity: 100%;
     }
 
-    75% {
+    71.66% {
         opacity: 0;
     }
 }
@@ -271,11 +243,11 @@
         opacity: 0;
     }
 
-    75% {
+    71.66% {
         opacity: 0;
     }
 
-    80% {
+    76.66% {
         opacity: 100%;
     }
 
@@ -314,5 +286,64 @@
 
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes shake-anim {
+    15% {
+        transform: rotate(5deg);
+    }
+
+    30% {
+        transform: rotate(-5deg);
+    }
+
+    45% {
+        transform: rotate(5deg);
+    }
+
+    60% {
+        transform: rotate(-5deg);
+    }
+
+    67.5% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes show-pokedex-project-anim {
+    100% {
+        transform: perspective(600px) rotateY(5deg);
+        opacity: 100%;
+    }
+}
+
+@keyframes show-first-website-project-anim {
+    100% {
+        transform: perspective(600px) rotateY(-5deg);
+        opacity: 100%;
+    }
+}
+
+@keyframes blur-anim {
+    100% {
+        filter: blur(2px);
+    }
+}
+
+@keyframes sentence-anim {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes progress-anim {
+    100% {
+        width: 110%;
+        opacity: 100%;
     }
 }

@@ -1,192 +1,237 @@
 /*skills-TODO*/
-main>.skills {
-    position: relative;
-    cursor: default;
+.skills {
+  position: relative;
+  cursor: default;
+  background: radial-gradient(ellipse at bottom,
+      #355274 0%,
+      #090a0f 80%,
+      #090a0f 100%);
 }
 
-main>.skills>.skills-banner {
-    float: left;
-    padding-top: 20vh;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    color: grey;
+.skills>.skills-banner {
+  float: left;
+  padding-top: 20vh;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  opacity: 30%;
 }
 
-main>.skills>.skills-banner>.letter {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: var(--banner-font);
-    font-family: 'Monoton', cursive;
-    font-weight: 100;
-    transform: skewY(15deg);
+.skills>.skills-banner>.letter {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--banner-font);
+  font-family: "Monoton", cursive;
+  font-weight: 100;
+  transform: skewY(15deg);
 }
 
-main>.skills>.skills-banner.blinking {
-    animation: banner-anim 0.3s ease-in-out forwards;
+.skills>.skills-banner.blinking {
+  animation: banner-anim 0.6s ease-in-out forwards;
+  opacity: 100%;
 }
 
 .skills>.welcome {
-    position: relative;
-    height: 50vh;
-    background-image: url("../images/milkyway.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  position: relative;
+  height: 50vh;
+  background-image: url("../images/milkyway.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .skills>.welcome>div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: var(--large-font);
-    text-align: center;
-    font-family: 'lato', sans-serif;
-    font-weight: 300;
-    color: white;
-    opacity: 0%;
-    text-shadow: 30px 30px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--very-big-font);
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  color: white;
+  opacity: 0%;
+  text-shadow: 30px 30px black;
 }
 
 .skills>.welcome>.first-sentence.visible {
-    animation: hello-anim1 10s linear infinite;
+  animation: hello-anim1 8s linear infinite;
 }
 
 .skills>.welcome>.second-sentence.visible {
-    animation: hello-anim2 10s linear infinite;
+  animation: hello-anim2 8s linear infinite;
 }
 
 .skills>.welcome>.third-sentence.visible {
-    animation: hello-anim3 10s linear infinite;
+  animation: hello-anim3 8s linear infinite;
 }
 
 .skills>.welcome>.forth-sentence.visible {
-    animation: hello-anim4 10s linear infinite;
+  animation: hello-anim4 8s linear infinite;
 }
 
-main>.skills>.skills-list {
-    float: right;
-    width: 75%;
-    height: 250vh;
-    padding-top: 30vh;
-    padding-right: 20vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    opacity: 0%;
+.skills>.skills-list {
+  float: right;
+  width: 75%;
+  padding-top: 30vh;
+  padding-right: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  opacity: 100%;
 }
 
-main>.skills>.skills-list.visible {
-    animation: show-anim 1s linear forwards;
+.skills>.skills-list>.skill {
+  position: relative;
+  width: 26%;
+  text-align: center;
+  color: white;
+  border: 5px solid transparent;
+  border-radius: 1em;
+  background-clip: padding-box;
+  margin-bottom: 5vh;
 }
 
-main>.skills>.skills-list>.skill {
-    position: relative;
-    width: 26%;
-    text-align: center;
-    color: white;
-    background-color: black;
-    border: 5px solid transparent;
-    border-radius: 1em;
-    background-clip: padding-box;
-    transition: 0.1s;
+.skills>.skills-list>.skill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  background: linear-gradient(to right, white, #38495a);
+  transition: 0.6s;
 }
 
-main>.skills>.skills-list>.skill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -5px;
-    border-radius: inherit;
-    background: linear-gradient(to right, white, #38495a);
+.skills>.skills-list>.skill>.skill-front,
+.skills>.skills-list>.skill>.skill-back {
+  backface-visibility: hidden;
+  transition: 0.6s;
+  position: relative;
 }
 
-main>.skills>.skills-list>.skill>.skill-front,
-main>.skills>.skills-list>.skill>.skill-back {
-    backface-visibility: hidden;
-    transition: 0.4s;
+.skills>.skills-list>.skill>.skill-front {
+  transform: perspective(900px) rotateY(0deg);
+  background-color: black;
+  border-radius: 1em;
+  height: 100%;
 }
 
-main>.skills>.skills-list>.skill>.skill-front {
-    transform: perspective(900px) rotateY(0deg);
+.skills>.skills-list>.skill>.skill-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: perspective(900px) rotateY(180deg);
+  background-color: black;
+  border-radius: 1em;
 }
 
-main>.skills>.skills-list>.skill>.skill-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: perspective(900px) rotateY(180deg);
+.skills>.skills-list>.skill.flip>.skill-front {
+  transform: perspective(900px) rotateY(-180deg);
 }
 
-main>.skills>.skills-list>.skill.flip>.skill-front {
-    transform: perspective(900px) rotateY(-180deg);
+.skills>.skills-list>.skill.flip>.skill-back {
+  transform: perspective(900px) rotateY(0deg);
 }
 
-main>.skills>.skills-list>.skill.flip>.skill-back {
-    transform: perspective(900px) rotateY(0deg);
+.skills>.skills-list>.skill.flip::before {
+  transform: perspective(900px) rotateY(-180deg);
 }
 
-main>.skills>.skills-list>.skill>.skill-front>h1 {
-    padding: 2vh 5px;
-    font-size: var(--medium-font);
-    font-family: 'lato', sans-serif;
-    font-weight: 300;
-    line-height: 5vh;
+.skills>.skills-list>.skill>.skill-front>h1 {
+  padding: 2vh 5px;
+  font-size: var(--medium-font);
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  line-height: 5vh;
 }
 
-main>.skills>.skills-list>.skill>.skill-front>i {
-    font-size: 30vh;
-    line-height: 30vh;
-    padding-bottom: 2vh;
+.skills>.skills-list>.skill>.skill-front>i {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-size: 30vh;
+  line-height: 30vh;
+  padding-bottom: 2vh;
+  max-height: 100%;
+  max-width: 100%;
 }
 
-main>.skills>.skills-list>.skill.flip>.skill-back>p {
-    padding: 1vh;
-    text-align: justify;
-    font-size: var(--very-small-font);
-    font-family: 'lato', sans-serif;
-    font-weight: 300;
+.skills>.skills-list>.skill.flip>.skill-back>p {
+  padding: 1vh;
+  text-align: justify;
+  font-size: var(--very-small-font);
+  font-family: "lato", sans-serif;
+  font-weight: 300;
 }
 
-main>.skills>.skills-list>.skill:nth-child(odd):hover {
-    color: rgb(195, 96, 44);
-    cursor: pointer;
+.skills>.skills-list>.skill:nth-child(odd):hover {
+  color: rgb(195, 96, 44);
+  cursor: pointer;
 }
 
-main>.skills>.skills-list>.skill:nth-child(even):hover {
-    color: rgb(156, 220, 254);
-    cursor: pointer;
+.skills>.skills-list>.skill:nth-child(even):hover {
+  color: rgb(156, 220, 254);
+  cursor: pointer;
 }
 
-main>.skills>.message {
-    position: absolute;
-    top: 65vh;
-    right: 11vw;
-    transform: rotate(15deg);
-    text-align: center;
-    font-size: var(--big-font);
-    animation: message-anim 8s infinite normal;
-    opacity: 0%;
-    font-family: 'lato', sans-serif;
-    font-weight: 300;
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.skills>.skills-list>.skill.aos-animate:nth-child(1) {
+  animation: shake-anim 1.5s 1s linear infinite;
 }
 
-main>.skills>.message>i {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.skills>.favourite {
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 50vh;
+  margin: 20vh 0 0vh 0;
+  background-image: url("../images/cosmos.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-main>.skills>.message.visible {
-    animation: message-anim 8s infinite normal, show-anim 2s linear forwards;
+.skills>.favourite>.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--very-big-font);
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+
+.skills>.favourite>.text>.first,
+.skills>.favourite>.text>.second {
+  opacity: 0%;
+}
+
+.skills>.favourite>.text>.second::before {
+  content: "<>";
+  color: #0086df;
+  text-shadow: 1px 1px black;
+}
+
+.skills>.favourite>.text>.second::after {
+  content: "</>";
+  color: #0086df;
+  text-shadow: 1px 1px black;
+}
+
+.skills>.favourite>.text>.first.visible {
+  animation: show-anim 1s linear forwards;
+}
+
+.skills>.favourite>.text>.second.visible {
+  animation: show-anim 1s 0.7s linear forwards;
 }

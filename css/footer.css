@@ -1,0 +1,26 @@
+footer {
+    position: relative;
+    height: 10vh;
+    background-color: black;
+}
+
+footer>h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 99%;
+    height: 8vh;
+    text-align: center;
+    line-height: 8vh;
+    border-radius: 14px;
+    font-family: 'lato', sans-serif;
+    font-weight: 300;
+    font-size: var(--very-small-font);
+    color: white;
+    background-color: rgb(22, 30, 41);
+}
+
+footer>h3>i {
+    padding: 0 4px;
+}

@@ -1,8 +1,12 @@
 @import url('handy.css');
 @import url('keyframes.css');
 @import url('nav.css');
+@import url('nav-mobile.css');
 @import url('introduction.css');
 @import url('skills.css');
 @import url('about.css');
 @import url('projects.css');
 @import url('contact.css');
+@import url('footer.css');
+@import url('mediaqueries-pc.css');
+@import url('mediaqueries-mobile.css');

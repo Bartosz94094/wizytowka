@@ -1,6 +1,23 @@
 /*contact-TODO*/
 
-main>.contact>.contact-banner {
+.contact {
+    position: relative;
+}
+
+.background-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images/cosm3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -500;
+    opacity: 0.4 !important;
+}
+
+.contact>.contact-banner {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,18 +32,20 @@ main>.contact>.contact-banner {
     color: grey;
     text-shadow: 5px 5px black;
     cursor: default;
+    opacity: 30%;
 }
 
-main>.contact>.contact-banner.blinking {
-    animation: banner-anim 0.3s ease-in-out forwards;
+.contact>.contact-banner.blinking {
+    animation: banner-anim 0.6s ease-in-out forwards;
+    opacity: 100%;
 }
 
-main>.contact>.contact-banner>.letter {
+.contact>.contact-banner>.letter {
     display: block;
     transform: rotate(90deg);
 }
 
-main>.contact>.contact-form-and-info {
+.contact>.contact-form-and-info {
     width: 60%;
     margin: 0 auto;
     font-family: 'lato', sans-serif;
@@ -36,11 +55,11 @@ main>.contact>.contact-form-and-info {
     text-shadow: 2px 2px black;
 }
 
-main>.contact>.contact-form-and-info>.contact-form {
+.contact>.contact-form-and-info>.contact-form {
     float: left;
 }
 
-main>.contact>.contact-form-and-info>.contact-form>h2 {
+.contact>.contact-form-and-info>.contact-form>h2 {
     padding: 2vh 0;
     font-family: 'lato', sans-serif;
     font-weight: 700;
@@ -48,7 +67,7 @@ main>.contact>.contact-form-and-info>.contact-form>h2 {
     cursor: default;
 }
 
-main>.contact>.contact-form-and-info>.contact-form>h3 {
+.contact>.contact-form-and-info>.contact-form>h3 {
     padding: 1.5vh 0;
     font-family: 'lato', sans-serif;
     font-weight: 400;
@@ -56,9 +75,10 @@ main>.contact>.contact-form-and-info>.contact-form>h3 {
     cursor: default;
 }
 
-main>.contact>.contact-form-and-info>.contact-form>form>div>input {
+.contact>.contact-form-and-info>.contact-form>form>div>input {
     display: block;
     width: 100%;
+    margin-top: 1vh;
     margin-bottom: 2vh;
     font-size: var(--very-small-font);
     font-family: 'lato', sans-serif;
@@ -66,18 +86,20 @@ main>.contact>.contact-form-and-info>.contact-form>form>div>input {
     padding: 1vh;
 }
 
-main>.contact>.contact-form-and-info>.contact-form>form>div>textarea {
+.contact>.contact-form-and-info>.contact-form>form>div>textarea {
     display: block;
     width: 100%;
     height: 30vh;
+    margin-top: 1vh;
     margin-bottom: 2vh;
     font-size: var(--very-small-font);
     font-family: 'lato', sans-serif;
     font-weight: 300;
     padding: 1vh;
+    resize: none;
 }
 
-main>.contact>.contact-form-and-info>.contact-form>form>div>button {
+.contact>.contact-form-and-info>.contact-form>form>div>button {
     display: block;
     width: 10vw;
     margin: 0 auto 5vh auto;
@@ -91,33 +113,33 @@ main>.contact>.contact-form-and-info>.contact-form>form>div>button {
     cursor: pointer;
 }
 
-main>.contact>.contact-form-and-info>.contact-form>form>div>button:hover {
+.contact>.contact-form-and-info>.contact-form>form>div>button:hover {
     color: white;
     border-color: white;
     background-color: rgb(28, 28, 28);
 }
 
-main>.contact>.contact-form-and-info>.contact-info {
+.contact>.contact-form-and-info>.contact-info {
     float: right;
 }
 
-main>.contact>.contact-form-and-info>.contact-info>h1 {
+.contact>.contact-form-and-info>.contact-info>h1 {
     padding: 2vh 0;
     font-size: var(--small-font);
 }
 
-main>.contact>.contact-form-and-info>.contact-info>.phone-number,
-main>.contact>.contact-form-and-info>.contact-info>.facebook,
-main>.contact>.contact-form-and-info>.contact-info>.github,
-main>.contact>.contact-form-and-info>.contact-info>.mail {
+.contact>.contact-form-and-info>.contact-info>.phone-number,
+.contact>.contact-form-and-info>.contact-info>.facebook,
+.contact>.contact-form-and-info>.contact-info>.github,
+.contact>.contact-form-and-info>.contact-info>.mail {
     padding: 1vh 0;
 }
 
-main>.contact>.contact-form-and-info>.contact-info>div>i {
-    padding-right: 3vw;
+.contact>.contact-form-and-info>.contact-info>div>i {
+    padding-right: 2vw;
 }
 
-main>.contact>.contact-form-and-info>.contact-info a {
+.contact>.contact-form-and-info>.contact-info a {
     color: white;
     text-decoration: none;
 }
